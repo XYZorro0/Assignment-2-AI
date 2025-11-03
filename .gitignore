@@ -1,0 +1,71 @@
+# Data files (too large for git)
+*.pkl
+*.pickle
+
+# Model files
+*.pth
+*.pt
+*.h5
+*.ckpt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Generated outputs
+*.png
+*.jpg
+*.jpeg
+*.npy
+*.npz
+training_history.png
+confusion_matrix.png
+train_samples.png
+val_samples.png
+class_distribution.png
+predictions.npy
+
+# Logs
+*.log
+logs/
+
+# Submission files
+*_Assignment.zip

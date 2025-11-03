@@ -2,6 +2,28 @@
 
 A custom Convolutional Neural Network (CNN) implementation for classifying images from the Tiny ImageNet dataset. This project is designed as a mini AI competition for image classification.
 
+## 🚀 Quick Start Options
+
+### Option 1: Google Colab (Recommended - FREE GPU!)
+
+**Fastest way to get started:**
+
+1. Open `CNN_Training_Notebook.ipynb` in [Google Colab](https://colab.research.google.com/)
+2. Enable GPU: `Runtime` → `Change runtime type` → `GPU`
+3. Upload your data files (train-70_.pkl, validation-10_.pkl)
+4. Run all cells
+5. Download `model.pth`
+
+**See [COLAB_GUIDE.md](COLAB_GUIDE.md) for detailed instructions**
+
+### Option 2: Local Machine (Requires Python setup)
+
+Use the Python scripts (.py files) if you have a local environment with GPU.
+
+See sections below for detailed local setup instructions.
+
+---
+
 ## 📋 Project Overview
 
 - **Task**: Multi-class image classification
@@ -44,18 +66,32 @@ Custom Sequential CNN with the following structure:
 
 ```
 Assignment-2-AI/
-├── README.md                  # This file
-├── requirements.txt           # Python dependencies
-├── train_model.py            # Training script
-├── submission_model.py       # Submission-ready model (REQUIRED FOR SUBMISSION)
-├── test_submission.py        # Test your submission before submitting
-├── explore_data.py           # Data exploration and visualization
-├── train-70_.pkl             # Training data (not in git - too large)
-├── validation-10_.pkl        # Validation data (not in git - too large)
-└── model.pth                 # Trained model weights (generated after training)
+├── README.md                      # This file
+├── COLAB_GUIDE.md                 # Complete Google Colab setup guide
+├── QUICKSTART.md                  # Quick reference guide
+├── requirements.txt               # Python dependencies
+│
+├── Google Colab Notebooks (Recommended):
+│   ├── CNN_Training_Notebook.ipynb     # Complete training pipeline for Colab
+│   └── submission_model.ipynb          # Submission file (SUBMIT THIS + model.pth)
+│
+├── Python Scripts (Local training):
+│   ├── train_model.py                  # Training script
+│   ├── submission_model.py             # Submission-ready model (alternative to .ipynb)
+│   ├── test_submission.py              # Test your submission before submitting
+│   └── explore_data.py                 # Data exploration and visualization
+│
+├── Data Files (Download separately):
+│   ├── train-70_.pkl                   # Training data (not in git - too large)
+│   └── validation-10_.pkl              # Validation data (not in git - too large)
+│
+└── Generated Files (after training):
+    └── model.pth                       # Trained model weights
 ```
 
-## 🚀 Quick Start
+## 🚀 Quick Start (Local Python)
+
+> **Note:** For Google Colab (easier, FREE GPU), see [COLAB_GUIDE.md](COLAB_GUIDE.md)
 
 ### 1. Setup Environment
 
@@ -135,22 +171,29 @@ This simulates how the instructor will test your model. It will:
 
 Create a zip file named `GroupX_Assignment.zip` (replace X with your group number) containing:
 
-1. **submission_model.py** (or .ipynb)
-   - Model class definition
-   - `load_model()` function
-   - `predict()` function
+**Choose ONE of these options:**
 
-2. **model.pth**
-   - Trained model weights
+**Option A: Jupyter Notebook (Recommended if using Colab)**
+1. **submission_model.ipynb** - The submission notebook
+2. **model.pth** - Trained model weights
+
+**Option B: Python Script (For local development)**
+1. **submission_model.py** - The submission script
+2. **model.pth** - Trained model weights
+
+Both options must include:
+- Model class definition
+- `load_model()` function
+- `predict()` function
 
 ### Submission Checklist
 
-- [ ] Run `test_submission.py` successfully
-- [ ] Verify validation accuracy is reasonable (>50%)
-- [ ] Check `model.pth` file size (should be ~40-50 MB)
-- [ ] Ensure `submission_model.py` has all required functions
-- [ ] Test that model can be loaded and used for prediction
-- [ ] Create `GroupX_Assignment.zip` with both files
+- [ ] Training completed successfully
+- [ ] Validation accuracy is reasonable (>50%)
+- [ ] `model.pth` file size is ~40-50 MB
+- [ ] Submission file (`submission_model.ipynb` or `.py`) has all required functions
+- [ ] Tested that model loads and predicts correctly
+- [ ] Created `GroupX_Assignment.zip` with both files
 - [ ] Add comment with teammate names and IDs after submission
 
 ### How the Instructor Will Test
